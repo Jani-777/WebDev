@@ -1,0 +1,54 @@
+p {
+  color: #773102;
+  font-family: "Times New Roman", Times, serif;
+  line-height: 1.5;
+}
+
+.intro {
+  background-color: #f0e6d2;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.early-life {
+  background-color: #e6f2ff;
+  padding: 15px;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.education {
+  background-color: #fddfdf;
+  padding: 15px;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.interests {
+  background-color: #e6ffe6;
+  padding: 15px;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.future-goals {
+  background-color: #f9e6ff;
+  padding: 15px;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.steps-to-goals {
+  background-color: #ffd1f5;
+  padding: 15px;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+div h3 {
+  color: darkgreen;
+}
+
+ol > li {
+  margin-bottom: 8px;
+}
