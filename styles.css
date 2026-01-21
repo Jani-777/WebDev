@@ -1,54 +1,110 @@
 p {
-  color: #773102;
-  font-family: "Times New Roman", Times, serif;
+  color: #f8d9c5;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 
+  'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: small;
   line-height: 1.5;
-}
-
-.intro {
-  background-color: #f0e6d2;
-  padding: 15px;
-  border-radius: 5px;
-}
-
-.early-life {
-  background-color: #e6f2ff;
-  padding: 15px;
-  border-radius: 5px;
-  margin-top: 20px;
-}
-
-.education {
-  background-color: #fddfdf;
-  padding: 15px;
-  border-radius: 5px;
-  margin-top: 20px;
-}
-
-.interests {
-  background-color: #e6ffe6;
-  padding: 15px;
-  border-radius: 5px;
-  margin-top: 20px;
-}
-
-.future-goals {
-  background-color: #f9e6ff;
-  padding: 15px;
-  border-radius: 5px;
-  margin-top: 20px;
-}
-
-.steps-to-goals {
-  background-color: #ffd1f5;
-  padding: 15px;
-  border-radius: 5px;
-  margin-top: 20px;
+  font-weight: bold;
 }
 
 div h3 {
-  color: darkgreen;
+  color: rgb(247, 134, 30);
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-ol > li {
+ul > li {
   margin-bottom: 8px;
+  color: white;
+}
+
+.image-container img {
+    opacity: 0.1;
+    transition: opacity 0.3s ease-in-out;
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.image-container img:hover {
+    opacity: 1.0;
+}
+
+/* 1. Define a fixed height for the container */
+.image-container {
+    width: 100%;
+    height: 400px; /* Set your desired fixed height here */
+    overflow: hidden;
+}
+
+/* 2. Style the images to fill that container */
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* This crops the image to fill the height without distortion */
+    object-position: center; /* Keeps the center of the image visible */
+}
+
+/* 3. Responsive adjustment for mobile devices */
+@media (max-width: 768px) {
+    .image-container {
+        height: 300px; /* Smaller height for mobile screens */
+    }
+}
+
+/* Container for the timeline */
+.education-timeline {
+    position: relative;
+    padding-left: 30px;
+    margin-top: 20px;
+}
+
+/* The vertical line */
+.education-timeline::before {
+    content: '';
+    position: absolute;
+    left: 7px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: rgb(247, 134, 30); /* Bootstrap primary color */
+}
+
+/* Individual education entry */
+.education-item {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+/* The circle/dot on the line */
+.education-dot {
+    position: absolute;
+    left: -30px;
+    top: 5px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: rgb(247, 134, 30);
+    border: 3px solid #fff;
+    box-shadow: 0 0 0 2px rgb(247, 134, 30);
+    z-index: 1;
+}
+
+/* Text content styling */
+.education-content h4 {
+    margin: 0;
+    font-weight: 600;
+    color: rgb(248, 175, 107);
+}
+
+.education-content h5 {
+    margin: 5px 0;
+    color: rgb(247, 226, 181);
+}
+
+.education-date {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: rgb(247, 134, 30);
+    margin-bottom: 5px;
 }
