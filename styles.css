@@ -1,64 +1,47 @@
+body {
+    font-family: 'Lucida Sans', Geneva, Verdana, sans-serif;
+}
+
+h3 {
+    color: rgb(247, 134, 30);
+}
+
 p {
-  color: #f8d9c5;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 
-  'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  font-size: small;
-  line-height: 1.5;
-  font-weight: bold;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    text-align: justify;
 }
 
-div h3 {
-  color: rgb(247, 134, 30);
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+.card {
+    background-color: rgb(247, 243, 225);
+    padding: 20px;
+    border-radius: 10px;
 }
 
-ul > li {
-  margin-bottom: 8px;
-  color: white;
-}
-
-.image-container img {
+.carousel-img {
+    height: 400px;
+    object-fit: cover;
     opacity: 0.1;
     transition: opacity 0.3s ease-in-out;
-    display: block;
-    max-width: 100%;
-    height: auto;
 }
 
-.image-container img:hover {
-    opacity: 1.0;
+.carousel-img:hover {
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
 }
 
-/* 1. Define a fixed height for the container */
-.image-container {
-    width: 100%;
-    height: 400px; /* Set your desired fixed height here */
-    overflow: hidden;
-}
-
-/* 2. Style the images to fill that container */
-.image-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* This crops the image to fill the height without distortion */
-    object-position: center; /* Keeps the center of the image visible */
-}
-
-/* 3. Responsive adjustment for mobile devices */
 @media (max-width: 768px) {
-    .image-container {
-        height: 300px; /* Smaller height for mobile screens */
+    .carousel-img {
+        height: 220px;
     }
 }
 
-/* Container for the timeline */
 .education-timeline {
     position: relative;
     padding-left: 30px;
     margin-top: 20px;
 }
 
-/* The vertical line */
 .education-timeline::before {
     content: '';
     position: absolute;
@@ -66,16 +49,14 @@ ul > li {
     top: 0;
     bottom: 0;
     width: 2px;
-    background: rgb(247, 134, 30); /* Bootstrap primary color */
+    background: rgb(247, 134, 30);
 }
 
-/* Individual education entry */
 .education-item {
     position: relative;
     margin-bottom: 30px;
 }
 
-/* The circle/dot on the line */
 .education-dot {
     position: absolute;
     left: -30px;
@@ -89,7 +70,6 @@ ul > li {
     z-index: 1;
 }
 
-/* Text content styling */
 .education-content h4 {
     margin: 0;
     font-weight: 600;
